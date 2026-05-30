@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "WealthOS",
+    "slug": "wealthos",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.wealthos.app",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "WealthOS uses Face ID to securely lock your private wealth dashboard."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0B0C10",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "package": "com.wealthos.app",
+      "permissions": [
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "WealthOS uses Face ID to lock your private wealth dashboard."
+        }
+      ],
+      "expo-font"
+    ]
+  }
+}
